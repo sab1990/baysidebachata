@@ -193,8 +193,8 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.1rem;
   align-items: center;
   padding: 3rem;
 }
@@ -229,8 +229,8 @@ h3 {
 }
 
 h1 {
-  max-width: 9.5ch;
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  max-width: 13ch;
+  font-size: clamp(2.1rem, 4.8vw, 3.8rem);
 }
 
 h2 {
@@ -253,6 +253,22 @@ p {
   max-width: 35rem;
   margin: 1.3rem 0 1.6rem;
   font-size: 1.04rem;
+}
+
+.seo-text-links {
+  margin: -0.3rem 0 1.2rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.seo-text-links a {
+  color: var(--accent-soft);
+  text-underline-offset: 0.16rem;
+}
+
+.seo-text-links a:hover,
+.seo-text-links a:focus-visible {
+  color: var(--teal);
 }
 
 .hero-actions {
@@ -553,6 +569,59 @@ p {
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.24);
 }
 
+.faq-section {
+  padding: 2rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.faq-item {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.faq-item h3 {
+  margin-bottom: 0.45rem;
+  font-size: clamp(1.2rem, 2.8vw, 1.55rem);
+  line-height: 1.15;
+}
+
+.faq-item p {
+  margin: 0;
+}
+
+.faq-item a {
+  color: var(--accent-soft);
+}
+
+.faq-item a:hover,
+.faq-item a:focus-visible {
+  color: var(--teal);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.75rem;
+  margin-top: 0.45rem;
+}
+
+.footer-links a {
+  color: var(--accent-soft);
+  text-decoration: underline;
+  text-underline-offset: 0.16rem;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--teal);
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -675,6 +744,7 @@ p {
 
   .hero,
   .section-card,
+  .faq-section,
   .classes-grid,
   .connect-band,
   .stat-card {
@@ -699,6 +769,11 @@ p {
   .site-footer,
   .footer-brand {
     align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.2rem;
   }
 }
 
